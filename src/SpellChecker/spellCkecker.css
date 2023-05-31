@@ -3,21 +3,163 @@
   margin-right: auto;
   margin-left: auto;
 }
+
 .spelchecker_top {
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 20px 0px 20px 100px;
   border-bottom: 1px solid #ededed;
-  width: 80%;
+  width: 87.5%;
 }
 
-.btn_fonts{
-    font-size: 14px;
+.btn_fonts {
+  font-size: 14px;
+}
+
+.img_margin {
+  margin-right: 10px;
 }
 
 .vl {
-    border-left: 2px solid #D8D8D8;
-    height: 35px;
-    margin: auto;
+  border-left: 2px solid #D8D8D8;
+  height: 35px;
+  margin: auto;
+}
+
+.lang_select {
+  font-size: 14px;
+}
+
+.lang_select>div {
+  border: none !important;
+}
+
+.css-1u9des2-indicatorSeparator {
+  display: none;
+}
+
+.language_options {
+  display: flex;
+  align-items: center;
+  gap: 10px
+}
+
+.sec_cont {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+@media only screen and (max-width: 1000px) {
+  .spelchecker_top {
+    padding: 20px 0px 20px 20px;
+    justify-content: center;
+    gap: 20px
   }
+
+  .sec_cont {
+    gap: 10px;
+  }
+
+  .lang_select {
+    margin-left: 0px !important;
+    padding: 0px !important;
+  }
+
+  .css-1fdsijx-ValueContainer {
+    padding: 0px 7px !important;
+
+  }
+
+  .btn_txt {
+    display: none;
+  }
+
+  .img_margin {
+    margin: 0px;
+  }
+}
+
+
+/* ///textfield styles */
+
+
+#editor-container {
+  min-height: 375px;
+  border: none;
+}
+
+.ql-container.ql-snow {
+  border: none !important;
+
+}
+
+
+.editor-wrapper {
+  position: relative;
+  padding: 20px 0px 20px 100px;
+  width: 95%;
+  border: none;
+}
+
+.ql-editor {
+  min-height: 60vh;
+}
+
+.right_cont {
+  float: right;
+  display: flex;
+  width: 400px;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.ql-toolbar {
+  position: absolute;
+  bottom: 0;
+  transform: translateY(100%);
+  border: none !important;
+}
+
+.ql-toolbar .ql-bold::before {
+  content: 'Bold  Ctrl+B';
+  position: absolute;
+  left: -9000px;
+  bottom: -30px;
+  background-color: #001849;
+  border-radius: 5px;
+  color: #FFFFFF;
+  padding: 5px;
+}
+
+.ql-toolbar .ql-bold:hover::before {
+  left: 100px;
+}
+
+.word_count {
+  background-color: #ffffff;
+  padding: 20px;
+  font-size: 12px;
+  width: 200px;
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+
+}
+
+@media only screen and (max-width: 1000px) {
+  .editor-wrapper {
+    width: 100%;
+    padding: 10px 0px 10px 10px;
+  }
+
+  .right_cont {
+    padding-top: 50px;
+    justify-content: space-evenly;
+    gap: 10px;
+  }
+
+}

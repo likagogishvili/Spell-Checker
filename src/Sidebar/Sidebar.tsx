@@ -1,12 +1,14 @@
 import "./sidebar.css";
 import * as landingIMG from "../assets/Landing/landing";
 import { useState } from "react";
+import { SidebarProps } from "../assets/intefaces";
 
-const Sidebar = () => {
+function Sidebar({ setCategory }: SidebarProps) {
   const [selected, setSelected] = useState(1);
 
   const handleItemClick = (itemId: number) => {
     setSelected(itemId);
+    setCategory(itemId);
   };
 
   const getNavItemClassName = (itemId: number) => {
@@ -94,7 +96,7 @@ const Sidebar = () => {
       >
         <li>
           <hr className="line mt-5 mb-4" />
-          <div className="nav-link align-middle pointer">
+          <div className="nav-link align-middle ">
             <img src={landingIMG.settings} alt="" />
             <p className="ms-1 d-none d-sm-inline" style={{ color: "white" }}>
               Speech to text
@@ -102,7 +104,7 @@ const Sidebar = () => {
           </div>
         </li>
         <li>
-          <div className="nav-link  align-middle pointer">
+          <div className="nav-link  align-middle ">
             <img src={landingIMG.facebook} alt="" />
             <p className="ms-1 d-none d-sm-inline" style={{ color: "white" }}>
               Facebook
@@ -110,7 +112,7 @@ const Sidebar = () => {
           </div>
         </li>
         <li>
-          <div className="nav-link  align-middle pointer">
+          <div className="nav-link  align-middle">
             <img src={landingIMG.questionMark} alt="" />
             <p className="ms-1 d-none d-sm-inline" style={{ color: "white" }}>
               Contact support
@@ -120,12 +122,28 @@ const Sidebar = () => {
         </li>
       </ul>
 
-      <div className="contrast">
-        <img src={landingIMG.moon} alt="" />
-        <img src={landingIMG.sun} alt="" />
+      <div className="contrast cur_poniter">
+        <button
+          style={{
+            border: "none",
+            background: "none",
+            backgroundColor: "transparent",
+          }}
+        >
+          <img src={landingIMG.moon} alt="" />
+        </button>
+        <button
+          style={{
+            border: "none",
+            background: "none",
+            backgroundColor: "transparent",
+          }}
+        >
+          <img src={landingIMG.sun} alt="" />
+        </button>
       </div>
     </div>
   );
-};
+}
 
 export default Sidebar;

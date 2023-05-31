@@ -2,6 +2,7 @@
     background-color: #2D62ED;
     padding: 25px;
     font-size: 12px;
+    min-width: 220px;
 }
 
 .selected {
@@ -44,16 +45,27 @@
 }
 
 @media only screen and (max-width: 600px) {
+    .sidebar {
+        min-width: 90px;
+    }
     .selected {
-        border-radius: 120px !important;
         display: flex;
         align-items: center;
         justify-content: center;
     }
-
     .contrast {
         width: 100%;
+    }
+    .sidebar_components {
+        padding-top: 70px;
+    }
 
+    #downMenu {
+        margin-top: 30%;
+    }
+
+    .contrast {
+        flex-direction: column;
     }
 
 }
